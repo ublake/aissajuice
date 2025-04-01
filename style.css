@@ -231,3 +231,29 @@ form button {
   cursor: pointer;
   border-radius: 5px;
 }
+/* Story Section Styles */
+.story-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #fef5e7; /* Match the site's background */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.story-container h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.story-container h3 {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.story-container p {
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
