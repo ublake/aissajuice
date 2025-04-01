@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aissa Juice</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="top-left-title">Aissa's Juices</div>
+    <div class="cart-icon" onclick="showCart()">
+      <img src="images/cart.png" alt="Cart Icon" />
+      <span id="cart-count">0</span>
+    </div>
+  </header>
+  
+  <div class="logo-container">
+    <img src="images/logo.png" alt="Aissa Juice Logo" />
+  </div>
+  
+  <div class="contact-info">
+    <p>aissajuice@gmail.com</p>
+    <p>(804) 582-8377</p>
+  </div>
+  
+  <div class="container">
+    <div class="products">
+      <div class="product">
+        <img src="images/hibiscus.png" alt="Hibiscus Blend" />
+        <div class="product-footer">
+          <span class="product-title">Hibiscus Blend</span>
+        </div>
+        <div class="plus-button" onclick="addToCart(event, 'Hibiscus Blend', this)">+</div>
+      </div>
+      <div class="product">
+        <img src="images/ginger.png" alt="Ginger Blend" />
+        <div class="product-footer">
+          <span class="product-title">Ginger Blend</span>
+        </div>
+        <div class="plus-button" onclick="addToCart(event, 'Ginger Blend', this)">+</div>
+      </div>
+      <div class="product">
+        <img src="images/baobab.png" alt="Baobab Juice" />
+        <div class="product-footer">
+          <span class="product-title">Baobab Juice</span>
+        </div>
+        <div class="plus-button" onclick="addToCart(event, 'Baobab Juice', this)">+</div>
+      </div>
+      <div class="product">
+        <img src="images/tamarind.png" alt="Tamarind Blend" />
+        <div class="product-footer">
+          <span class="product-title">Tamarind Blend</span>
+        </div>
+        <div class="plus-button" onclick="addToCart(event, 'Tamarind Blend', this)">+</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Order Form & Cart -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="hideCart()">&times;</span>
+      <h2>Your Order</h2>
+      <div id="orderSummary"></div>
+      <form id="order-form" onsubmit="sendEmail(event)">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="tel" name="phone" placeholder="Your Phone" required />
+        <input type="email" name="email" placeholder="Your Email (optional)" />
+        <textarea name="specialInstructions" placeholder="Additional Info: (Optional)"></textarea>
+        <input type="hidden" name="orderDetails" id="orderDetails" />
+        <button type="submit">Submit Order</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- EmailJS Library -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
